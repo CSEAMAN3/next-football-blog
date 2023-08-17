@@ -1,5 +1,6 @@
-export const blogs = [
+const blogs = [
   {
+    category: "team",
     title: "Unveiling the Potential: Arsenal FC's Quest for Premier League Glory",
     blurb:
       "As the Premier League season kicks into high gear, football enthusiasts around the world are once again gripped by anticipation and excitement.",
@@ -40,6 +41,7 @@ export const blogs = [
     slug: "arsenal-title-race",
   },
   {
+    category: "player",
     title: "End of an Era: Tottenham's Bold Move in Selling Harry Kane",
     blurb:
       "The world of football was rocked by seismic news when Tottenham Hotspur, a club synonymous with their star striker Harry Kane, announced his departure.",
@@ -80,6 +82,7 @@ export const blogs = [
     slug: "harry-kane-sold",
   },
   {
+    category: "player",
     title: "Race for Premier League Golden Boot: Top 5 Contenders of the Season",
     blurb:
       "As another thrilling Premier League season unfolds, the battle for supremacy is not just among the teams but also among the league's top goal-scorers.",
@@ -116,6 +119,7 @@ export const blogs = [
     slug: "top-scorers",
   },
   {
+    category: "team",
     title: "Manchester City's Triumphant Journey: Conquering the Treble in a Historic Season",
     blurb:
       "The 2021-2022 football season will be remembered as a defining chapter in Manchester City's illustrious history. The club etched its name in the annals of football greatness by achieving an extraordinary feat: winning the treble.",
@@ -132,7 +136,6 @@ export const blogs = [
         heading: "FA Cup Glory",
         text: "In the FA Cup, Manchester City continued to showcase their prowess, displaying their hunger for silverware on multiple fronts. The journey to FA Cup glory featured thrilling encounters against formidable opponents. The final, a showcase of skill and determination, saw Manchester City overcome all obstacles to secure the coveted cup. The FA Cup victory added to the team's growing list of achievements, reaffirming their dominance in English football.",
       },
-      { heading: "", text: "" },
       {
         heading: "Champions League Triumph",
         text: "The UEFA Champions League had long been an elusive dream for Manchester City. However, in the 2021-2022 season, the stars aligned. The team navigated a challenging group stage, showcased their mettle in knockout rounds, and displayed remarkable resilience and determination in the final. The historic Champions League victory was a culmination of years of hard work, dedication, and a relentless pursuit of excellence.",
@@ -157,6 +160,7 @@ export const blogs = [
     slug: "man-city-winners",
   },
   {
+    category: "team",
     title: "Survival of the Fittest: The Intense Relegation Battle in the Current Premier League Season",
     blurb:
       "As the Premier League season unfolds with its usual mix of excitement and drama, one of the most nail-biting storylines to watch is the relegation battle.",
@@ -197,3 +201,18 @@ export const blogs = [
     slug: "relegation-battle",
   },
 ];
+
+// get all the posts (this is simulating an API or database)
+export function getBlogs() {
+  return blogs;
+}
+
+// get One of the blog posts (this is simulating an API or database)
+export function getBlogBySlug(slug: string) {
+  return blogs.find((blog) => blog.slug === slug);
+}
+
+// get Blogs by category
+export function getBlogsByCategory(category: string) {
+  return blogs.filter((blog) => blog.category === category);
+}
