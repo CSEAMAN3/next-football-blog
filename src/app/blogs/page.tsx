@@ -1,7 +1,7 @@
 import { getBlogs } from "@/lib/blogs";
 import Image from "next/image";
 import Arsenal from "@/../public/images/arsenal.jpg";
-import { imageConfigDefault } from "next/dist/shared/lib/image-config";
+// import { imageConfigDefault } from "next/dist/shared/lib/image-config";
 import Link from "next/link";
 
 // type Blog = {
@@ -25,7 +25,7 @@ export default function page() {
           </div>
         );
       })}
-      <nav>
+      {/* <nav>
         <ul>
           <li>
             <Link href="/blogs/categories/team">team blogs</Link>
@@ -34,7 +34,7 @@ export default function page() {
             <Link href="/blogs/categories/player">player blogs</Link>
           </li>
         </ul>
-      </nav>
+      </nav> */}
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { getBlogs, getBlogBySlug } from "@/lib/blogs";
+import { kv } from "@vercel/kv";
 
 type BlogPageParam = {
   blog: string;
